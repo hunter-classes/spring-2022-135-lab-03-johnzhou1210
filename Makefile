@@ -1,8 +1,9 @@
 # Starter Makefile
-# add .cpp and .h files as specified in each task. 
+# add .cpp and .h files as specified in each task.
+OBJECTS=main.o reservoir.o
 
 main: main.o reservoir.o
-	g++ -o main main.o reservoir.o
+	g++ -o main $(OBJECTS)
 
 main.o: main.cpp reservoir.h
 	g++ -c main.cpp
@@ -10,5 +11,4 @@ main.o: main.cpp reservoir.h
 reservoir.o: reservoir.cpp reservoir.h
 	g++ -c reservoir.cpp
 clean:
-	rm -f main.o reservoir.o
-
+	rm -f $(OBJECTS)
