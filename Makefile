@@ -12,6 +12,6 @@ reservoir.o: reservoir.cpp reservoir.h reverseorder.h
 	g++ -c reservoir.cpp
 
 reverseorder.o: reverseorder.cpp reverseorder.h reservoir.h
-
+	g++ -c reverseorder.cpp
 clean:
 	rm -f $(OBJECTS)
