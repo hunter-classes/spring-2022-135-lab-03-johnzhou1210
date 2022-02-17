@@ -11,7 +11,7 @@ std::string determineEarlierDate(std::string date1, std::string date2)
   if (month1 > month2)
   {
     return date2;
-  } else {
+  } else if (month1 != month2) {
     return date1;
   }
   // now take care of the month's date
@@ -35,6 +35,7 @@ void reverse_oreder(std::string date1, std::string date2)
   } else {
     laterDate = date1;
   }
+  // std::cout << "earlier date is: " << earlierDate << " and later date is " << laterDate << "\n";
 
   std::ifstream file;
   file.open("Current_Reservoir_Levels.tsv");
@@ -58,7 +59,7 @@ void reverse_oreder(std::string date1, std::string date2)
       std::vector<std::string> arr = tabSplit(currLn);
       if (arr[0] == earlierDate)
       {
-        std::cout << "arr[4] is " << arr[4] << std::endl;
+        // std::cout << "arr[4] is " << arr[4] << std::endl;
         appendStatus = 1;
         dates.push_back(arr[0] + "\t" + arr[4]);
       }
@@ -80,6 +81,7 @@ void reverse_oreder(std::string date1, std::string date2)
   {
     std::cout << dates[i] << std::endl;
   }
+  std::cout << "\n";
 
   file.close();
 }

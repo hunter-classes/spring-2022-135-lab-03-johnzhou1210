@@ -14,11 +14,12 @@ std::vector<std::string> tabSplit(std::string str)
     // std::cout << currString << std::endl;
     if (currString == "\t")
     {
-      result.push_back(str.substr(lastCutPoint, i));
-      //std::cout << result.size() << "\n";
+      // std::cout << "adding " << str.substr(lastCutPoint, i - lastCutPoint) << ", with cut point at index " << lastCutPoint << " with length " << i << std::endl;
+      result.push_back(str.substr(lastCutPoint, i - lastCutPoint));
+      // std::cout << result.size() << "\n";
       lastCutPoint = i + 1;
     } else {
-      //std::cout << "compare method returned " << currString.compare("\t") << "\n";
+      // std::cout << "compare method returned " << currString.compare("\t") << "\n";
     }
   }
   return result;

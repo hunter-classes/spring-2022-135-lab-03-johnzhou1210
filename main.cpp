@@ -4,8 +4,6 @@
 #include "reservoir.h"
 #include "reverseorder.h"
 
-
-
 int main()
 {
   std::cout << "========================= TASK A =========================\n";
@@ -20,6 +18,9 @@ int main()
   std::cout << "compare_basins(\"11/09/2018\") returns " << compare_basins("11/09/2018") << "\n";
   std::cout << "compare_basins(\"06/25/2018\") returns " << compare_basins("06/25/2018") << "\n";
   std::cout << "========================= TASK D =========================\n";
-  std::cout << "reverse_oreder(\"03/29/2018, 04/04/2018\") prints:"; reverse_oreder("03/29/2018", "04/04/2018");
+  std::cout << "reverse_oreder(\"05/29/2018\", \"06/02/2018\") prints:"; reverse_oreder("05/29/2018", "06/02/2018");
+  std::cout << "reverse_oreder(\"02/17/2018\", \"02/26/2018\") prints:"; reverse_oreder("02/17/2018", "02/26/2018");
+  std::cout << "reverse_oreder(\"10/01/2018\", \"09/22/2018\") prints:"; reverse_oreder("10/01/2018", "09/22/2018");
+  std::cout << "==========================================================\n";
   return 0;
 }
